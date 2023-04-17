@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/vue@next"></script>
+  <title>BOOLZAP</title>
+</head>
+<body>
+
+<div class="app-wrapper">
+  <div id="app">
+    <div class="main-container">
+      <div class="sidebar">
+        <input type="text" v-model="search" @input="filterContacts" placeholder="Cerca contatti...">
+        <div class="contacts">
+          <div class="contact" v-for="contact in filteredContacts" :key="contact.id" @click="setActiveContact(contact)">
+            <img :src="'img/' + contact.avatar" :alt="contact.name" class="avatar">
+            <div class="contact-info">
+              <h4>{{ contact.name }}</h4>
+              <p>{{ contact.lastMessage }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="chat">
+        <div class="header" :style="{ 'background-color': activeContactColor }">
+          {{ activeContact.name }}
+        </div>
+       
+       
+  </div>
+</div>
+  
+<script src="js/script.js"></script>
+</body>
+</html>

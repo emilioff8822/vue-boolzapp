@@ -7,16 +7,13 @@ e. All'interno del div "chat", creo un div con una classe, ad esempio "header", 
 f. Sempre all'interno del div "chat", creo un div con una classe, ad esempio "messages", per l'elenco dei messaggi.
 g. Infine, creo un div con una classe, ad esempio "input-container", all'interno del div "chat" per il campo di input e il pulsante per inviare nuovi messaggi.
 
- CSS:
+Stilizzazione CSS:
 
 a. Definisco gli stili per gli elementi HTML come il "main-container", "sidebar", "contacts", "chat", "header", "messages" e "input-container".
 
 b. Creo media query per rendere l'applicazione responsiva su dispositivi mobili e schermi di dimensioni diverse.
 
-
-
-
-JavaScript:
+Funzionalità JavaScript:
 
 Creo un'istanza Vue con un oggetto contenente le proprietà data, methods, mounted e watch.
 
