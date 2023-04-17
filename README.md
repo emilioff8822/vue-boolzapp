@@ -1,10 +1,40 @@
-HTML: creo la struttura di base dell'applicazione di chat con due colonne: una per la lista dei contatti e una per la chat attiva. Ho utilizzato la direttiva v-for di Vue.js per generare dinamicamente l'elenco dei contatti e la direttiva v-model per il binding dei dati tra l'input di ricerca e la variabile search.
+Struttura HTML:
+a. Creo un div principale con una classe, ad esempio "main-container", che conterrà sia la colonna dei contatti che la colonna della chat.
+b. All'interno del "main-container", creo un div con una classe, ad esempio "sidebar", per la colonna dei contatti.
+c. All'interno della "sidebar", creo un input per la ricerca dei contatti e un div con una classe, ad esempio "contacts", per l'elenco dei contatti.
+d. Creo un div con una classe, ad esempio "chat", all'interno del "main-container" per la colonna della chat.
+e. All'interno del div "chat", creo un div con una classe, ad esempio "header", per l'intestazione della chat.
+f. Sempre all'interno del div "chat", creo un div con una classe, ad esempio "messages", per l'elenco dei messaggi.
+g. Infine, creo un div con una classe, ad esempio "input-container", all'interno del div "chat" per il campo di input e il pulsante per inviare nuovi messaggi.
 
-CSS: definisco gli stili per l'applicazione di chat, comprese le dimensioni, i colori e le proprietà di layout per la lista dei contatti e la chat attiva. Ho incluso media query per adattare la chat ai dispositivi mobili.
+ CSS:
 
-JavaScript: Utilizzando Vue.js, creo un'istanza dell'applicazione e definito le variabili necessarie, come i contatti, i messaggi, il contatto attivo e l'input di ricerca. imnplemento  diverse funzioni:
+a. Definisco gli stili per gli elementi HTML come il "main-container", "sidebar", "contacts", "chat", "header", "messages" e "input-container".
 
-filterContacts: Filtra i contatti in base al testo inserito nel campo di ricerca e aggiorna l'elenco dei contatti filtrati.
-setActiveContact: Imposta il contatto attivo, carica i messaggi relativi a quel contatto e mostra l'ultima conversazione.
-sendMessage: Invia un messaggio e aggiorna la conversazione. Inoltre, genera una risposta automatica "Ok" dopo un breve intervallo di tempo.
-updateLastMessage: Aggiorna l'ultimo messaggio visualizzato nella lista dei contatti in base all'ultimo messaggio inviato nella chat attiva.
+b. Creo media query per rendere l'applicazione responsiva su dispositivi mobili e schermi di dimensioni diverse.
+
+
+
+
+JavaScript:
+
+Creo un'istanza Vue con un oggetto contenente le proprietà data, methods, mounted e watch.
+
+Nella proprietà data, definisco le variabili necessarie:
+a. contacts: un array di oggetti che rappresenta i contatti, con proprietà come nome, immagine e messaggi.
+b. activeContact: un oggetto che rappresenta il contatto attualmente selezionato nella chat.
+c. filteredContacts: un array di oggetti che rappresenta i contatti filtrati in base alla ricerca.
+d. searchText: una stringa per la ricerca di contatti.
+e. inputMessage: una stringa per il messaggio di input.
+
+Nella proprietà methods, creo le seguenti funzioni:
+
+a. filterContacts(): questa funzione viene chiamata ogni volta che l'utente digita nel campo di ricerca. Filtra i contatti in base al testo inserito dall'utente e aggiorna l'array filteredContacts.
+
+b. setActiveContact(contact): questa funzione viene chiamata quando l'utente seleziona un contatto. Imposta il contatto selezionato come activeContact e aggiorna la chat con i messaggi corrispondenti.
+
+c. sendMessage(): questa funzione viene chiamata quando l'utente invia un nuovo messaggio. Aggiunge il messaggio all'array dei messaggi del contatto attivo, aggiorna il campo lastMessage del contatto e svuota il campo di input.
+
+d. formatDate(timestamp): questa funzione formatta il timestamp dei messaggi in una stringa leggibile, ad esempio "10:30 AM".
+
+Nella proprietà mounted, inizializzo l'elenco filtrato dei contatti impostando filteredContacts uguale all'array contacts. Questo viene eseguito quando l'applicazione viene montata per la prima volta.
