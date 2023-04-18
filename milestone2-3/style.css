@@ -155,10 +155,16 @@ body {
   margin: 0 auto;
 }
 
-.info-name-date {
+.contact-info {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 100%;
+}
+
+.info-name-date {
+  font-size: 14px;
+  color: #777;
 }
 
 @media (max-width: 768px) {

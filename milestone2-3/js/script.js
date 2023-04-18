@@ -46,9 +46,9 @@ createApp({
 
     }
   },
-  printClock(){
-    this.clock = dt.now().setLocale('it').toLocaleString(dt.DATETIME_SHORT_WITH_SECONDS);
   
+  formatDate(date) {
+    return dt.fromISO(date).setLocale('it').toLocaleString(dt.DATETIME_SHORT_WITH_SECONDS);
   },
 
   
