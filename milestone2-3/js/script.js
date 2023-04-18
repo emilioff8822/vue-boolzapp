@@ -43,6 +43,9 @@ createApp({
         const reply = { id: Date.now() + 1, text: 'Ok', type: 'received' };
         this.activeContact.messages.push(reply);
         this.activeContact.lastMessage = reply.text;
+       
+        //dt.now().toISO() CONVERTEl'oggetto DateTime corrente, rappresentante la data e l'ora correnti, in una stringa ISO . Questa stringa viene poi utilizzata per aggiornare la proprietà lastMessageDate del contatto attivo, permettendo di visualizzare l'orario dell'ultimo messaggio inviato o ricevuto
+
         this.activeContact.lastMessageDate = dt.now().toISO();
       }, 1000);
 
