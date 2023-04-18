@@ -48,6 +48,7 @@ createApp({
 
   },
   mounted() {
-    
+    this.filteredContacts = this.contacts;
+  
   },
 }).mount("#app");
