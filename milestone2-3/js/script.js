@@ -5,12 +5,12 @@ createApp({
   data() {
     return {
       contacts: [
-        { id: 1, name: 'Ulisse', avatar: 'avatar_1.jpg', lastMessage: 'Ciao!', messages: [] },
-        { id: 2, name: 'Emilio', avatar: 'avatar_2.jpg', lastMessage: 'A presto!', messages: [] },
-        { id: 3, name: 'Icaro', avatar: 'avatar_3.jpg', lastMessage: 'Come va?', messages: [] },
-        { id: 4, name: 'Apollo', avatar: 'avatar_4.jpg', lastMessage: 'Buona giornata!', messages: [] },
-        { id: 5, name: 'Orazio', avatar: 'avatar_5.jpg', lastMessage: 'Ci vediamo!', messages: [] },
-      ],
+      { id: 1, name: 'Ulisse', avatar: 'avatar_1.jpg', lastMessage: 'Ciao!', lastMessageDate: '2023-04-17T10:30:00', messages: [] },
+      { id: 2, name: 'Emilio', avatar: 'avatar_2.jpg', lastMessage: 'A presto!', lastMessageDate: '2023-04-16T15:45:00', messages: [] },
+      { id: 3, name: 'Icaro', avatar: 'avatar_3.jpg', lastMessage: 'Come va?', lastMessageDate: '2023-04-15T12:00:00', messages: [] },
+      { id: 4, name: 'Apollo', avatar: 'avatar_4.jpg', lastMessage: 'Buona giornata!', lastMessageDate: '2023-04-14T09:15:00', messages: [] },
+      { id: 5, name: 'Orazio', avatar: 'avatar_5.jpg', lastMessage: 'Ci vediamo!', lastMessageDate: '2023-04-13T18:30:00', messages: [] },
+    ],
       filteredContacts: [],
       search: '',
       activeContact: { name: '', messages: [] },
@@ -36,12 +36,14 @@ createApp({
     if (this.inputMessage.trim()) {
       const message = { id: Date.now(), text: this.inputMessage, type: 'sent' };
       this.activeContact.messages.push(message);
+      this.activeContact.lastMessageDate = dt.now().toISO();
       this.inputMessage = '';
 
       setTimeout(() => {
         const reply = { id: Date.now() + 1, text: 'Ok', type: 'received' };
         this.activeContact.messages.push(reply);
         this.activeContact.lastMessage = reply.text;
+        this.activeContact.lastMessageDate = dt.now().toISO();
       }, 1000);
 
     }
