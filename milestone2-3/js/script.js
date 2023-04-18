@@ -1,4 +1,5 @@
 const { createApp } = Vue;
+const dt = luxon.DateTime
 
 createApp({
   data() {
@@ -18,6 +19,7 @@ createApp({
     };
   },
   methods: {
+    
     filterContacts() {
       this.filteredContacts = this.contacts.filter((contact) =>
         contact.name.toLowerCase().includes(this.search.toLowerCase())
@@ -44,6 +46,12 @@ createApp({
 
     }
   },
+  printClock(){
+    this.clock = dt.now().setLocale('it').toLocaleString(dt.DATETIME_SHORT_WITH_SECONDS);
+  
+  },
+
+  
 
 
   },
