@@ -5,11 +5,11 @@ createApp({
   data() {
     return {
       contacts: [
-      { id: 1, name: 'Ulisse', avatar: 'avatar_1.jpg', lastMessage: 'Ciao!', lastMessageDate: '2023-04-17T10:30:00', messages: [] },
-      { id: 2, name: 'Emilio', avatar: 'avatar_2.jpg', lastMessage: 'A presto!', lastMessageDate: '2023-04-16T15:45:00', messages: [] },
-      { id: 3, name: 'Icaro', avatar: 'avatar_3.jpg', lastMessage: 'Come va?', lastMessageDate: '2023-04-15T12:00:00', messages: [] },
-      { id: 4, name: 'Apollo', avatar: 'avatar_4.jpg', lastMessage: 'Buona giornata!', lastMessageDate: '2023-04-14T09:15:00', messages: [] },
-      { id: 5, name: 'Orazio', avatar: 'avatar_5.jpg', lastMessage: 'Ci vediamo!', lastMessageDate: '2023-04-13T18:30:00', messages: [] },
+      { id: 1, name: 'Ulisse', avatar: 'avatar_1.jpg', lastMessage: '', lastMessageDate: '2023-04-17T10:30:00', messages: [] },
+      { id: 2, name: 'Emilio', avatar: 'avatar_2.jpg', lastMessage: '', lastMessageDate: '2023-04-16T15:45:00', messages: [] },
+      { id: 3, name: 'Icaro', avatar: 'avatar_3.jpg', lastMessage: '', lastMessageDate: '2023-04-15T12:00:00', messages: [] },
+      { id: 4, name: 'Apollo', avatar: 'avatar_4.jpg', lastMessage: '', lastMessageDate: '2023-04-14T09:15:00', messages: [] },
+      { id: 5, name: 'Orazio', avatar: 'avatar_5.jpg', lastMessage: '', lastMessageDate: '2023-04-13T18:30:00', messages: [] },
     ],
       filteredContacts: [],
       search: '',
