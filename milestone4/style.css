@@ -161,6 +161,16 @@ body {
   width: 100%;
 }
 
+.second-header{
+position: fixed;
+background-color: darkgreen;
+height: 80px;
+top: 0;
+left: 0;
+right: 0;
+
+}
+
 @media (max-width: 768px) {
   .main-container {
     flex-direction: column;
