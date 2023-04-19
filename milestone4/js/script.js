@@ -14,7 +14,7 @@ createApp({
       filteredContacts: [],
       search: '',
       activeContact: { name: '', messages: [] },
-      activeContactColor: '#4caf50',
+      activeContactColor: '#B74E4E',
       inputMessage: '',
     };
   },

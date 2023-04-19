@@ -10,7 +10,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  min-height: 60vh;
 }
 
 .main-container {
@@ -19,6 +19,8 @@ body {
   margin: 20px auto;
   border: 1px solid #ccc;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 2;
 }
 
 .sidebar {
@@ -164,10 +166,11 @@ body {
 .second-header{
 position: fixed;
 background-color: darkgreen;
-height: 80px;
+height: 90px;
 top: 0;
 left: 0;
 right: 0;
+z-index: 1;
 
 }
 
